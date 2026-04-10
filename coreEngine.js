@@ -1,9 +1,9 @@
 (function () {
 
-    // 🔥 READ MODE DIRECTLY (instant, no delay)
+
     const MODE = localStorage.getItem("ai_speed_mode") || "fast";
 
-    // 🚨 FULL MODE → DO NOT PATCH FETCH
+
     if (MODE === "full") {
         console.log("📜 Full mode: interceptor disabled");
         return;
