@@ -103,13 +103,6 @@ A browser extension that significantly improves ChatGPT performance by reducing 
 
 ---
 
-## ⭐ Future Improvements
-
-* Multi-site support (Claude, Gemini)
-* Keyboard shortcuts
-* Advanced UI customization
-* Auto performance tuning
-
 ---
 
 ## 📜 License
