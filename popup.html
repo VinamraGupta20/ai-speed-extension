@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px;
+      font-family: Arial;
+      padding: 10px;
+      background: #111;
+      color: white;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    .value {
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h3>AI Speed</h3>
+
+<label>Visible Messages</label>
+<input type="range" id="slider" min="1" max="20" />
+<div class="value" id="value">3</div>
+
+<label style="margin-top:10px; display:block;">
+  <input type="checkbox" id="modeToggle" />
+  Full Conversation Mode
+</label>
+
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* 🔥 Badge */
+.ai-speed-badge {
+    position: fixed;
+    top: 60px;
+    right: 30px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.7);
+    color: white;
+}
+
+/* Modes */
+.ai-speed-fast {
+    border: 1px solid #10a37f;
+    box-shadow: 0 0 8px rgba(16,163,127,0.5);
+}
+
+.ai-speed-full {
+    border: 1px solid #6366f1;
+    box-shadow: 0 0 8px rgba(99,102,241,0.5);
+}
+
+/* 🔥 Button */
+#ai-speed-btn {
+    margin: 12px auto;
+    display: block;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #10a37f, #0ea5e9);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+#ai-speed-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(16,163,127,0.4);
+}
