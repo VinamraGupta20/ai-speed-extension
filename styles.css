@@ -1,4 +1,4 @@
-/* 🔥 Badge */
+
 .ai-speed-badge {
     position: fixed;
     top: 60px;
@@ -13,7 +13,7 @@
     color: white;
 }
 
-/* Modes */
+
 .ai-speed-fast {
     border: 1px solid #10a37f;
     box-shadow: 0 0 8px rgba(16,163,127,0.5);
@@ -24,7 +24,7 @@
     box-shadow: 0 0 8px rgba(99,102,241,0.5);
 }
 
-/* 🔥 Button */
+
 #ai-speed-btn {
     margin: 12px auto;
     display: block;
