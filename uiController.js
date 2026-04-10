@@ -2,7 +2,7 @@ let visibleLimit = 3;
 let stepSize = 3;
 let MODE = localStorage.getItem("ai_speed_mode") || "fast";
 
-// 🔥 Load settings
+
 chrome.storage.local.get(["visibleLimit", "mode"], (res) => {
     if (res.visibleLimit) visibleLimit = res.visibleLimit;
     if (res.mode) MODE = res.mode;
@@ -11,7 +11,7 @@ chrome.storage.local.get(["visibleLimit", "mode"], (res) => {
     waitForMessages();
 });
 
-// 🔥 Listen changes
+
 chrome.storage.onChanged.addListener((changes) => {
     if (changes.mode) {
         MODE = changes.mode.newValue;
@@ -33,7 +33,7 @@ function updateView() {
     const messages = getMessages();
     if (messages.length === 0) return;
 
-    // 🔥 FULL MODE → show everything
+  
     if (MODE === "full") {
         messages.forEach(msg => {
             msg.style.display = "block";
@@ -102,7 +102,7 @@ function waitForMessages() {
     }
 }
 
-// 🔥 Badge
+
 function createBadge() {
     let badge = document.getElementById("ai-speed-badge");
 
@@ -124,7 +124,7 @@ function createBadge() {
     }
 }
 
-// 🔥 Observer
+
 let timer;
 
 const observer = new MutationObserver(() => {
