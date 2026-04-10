@@ -24,21 +24,41 @@
     box-shadow: 0 0 8px rgba(99,102,241,0.5);
 }
 
-
+/* 🔥 Button */
+/* 🔥 Clean ChatGPT-style Button */
 #ai-speed-btn {
-    margin: 12px auto;
+    margin: 10px auto;
     display: block;
-    padding: 10px 18px;
-    background: linear-gradient(135deg, #10a37f, #0ea5e9);
-    color: white;
-    border: none;
-    border-radius: 999px;
+    padding: 8px 14px;
+
+    background: #ffffff;          /* pure white */
+    color: #111;                  /* black text */
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
 }
 
+/* 🌙 Dark mode (important) */
+@media (prefers-color-scheme: dark) {
+    #ai-speed-btn {
+        background: #ffffff;      /* still white */
+        color: #111;
+        border: 1px solid #444;
+    }
+}
+
+/* Hover (very subtle) */
 #ai-speed-btn:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 20px rgba(16,163,127,0.4);
+    background: #f5f5f5;
+}
+
+/* Click feel */
+#ai-speed-btn:active {
+    transform: scale(0.97);
 }
