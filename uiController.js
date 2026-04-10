@@ -33,18 +33,18 @@ function updateView() {
     const messages = getMessages();
     if (messages.length === 0) return;
 
-    // 🔥 FULL MODE → show everything
-    if (MODE === "full") {
-        messages.forEach(msg => {
-            msg.style.display = "block";
-        });
-
-        hideButton();
-        return;
-    }
-
     const total = messages.length;
-    const limit = visibleLimit * 2;
+
+    // 🔥 DIFFERENT LIMIT LOGIC
+    let limit;
+
+    if (MODE === "full") {
+        // 👇 Full mode → show MORE but not ALL
+        limit = visibleLimit * 10;   // 🔥 tweak this (10–20)
+    } else {
+        // 👇 Fast mode → aggressive trimming
+        limit = visibleLimit * 2;
+    }
 
     let hiddenCount = 0;
 
@@ -84,7 +84,9 @@ function addButton(messages, hiddenCount) {
     }
 
     btn.style.display = "block";
-    btn.innerText = `Load More (${Math.floor(hiddenCount / 2)} hidden)`;
+
+    // 🔥 Better count (not /2 guesswork)
+    btn.innerText = `Load More (${hiddenCount} hidden)`;
 }
 
 function hideButton() {
